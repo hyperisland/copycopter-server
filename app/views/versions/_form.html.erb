@@ -19,11 +19,12 @@
 
   <%= form.input :content %>
 
-  <li id='editor_mode'>
+  <!-- <li id='editor_mode'>
     <%= link_to 'Edit as HTML', '#', :id => 'edit_html' %>
     <%= link_to 'Edit in simple mode', '#', :id => 'edit_simple',
           :style => 'display: none' %>
-  </li>
+  </li> -->
+  <li><%= link_to 'Markdown Syntax', 'http://daringfireball.net/projects/markdown/syntax' %></li>
 <% end %>
 
 <%= hidden_field_tag 'prefer_html', prefer_html? %>

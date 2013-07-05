@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   hide_action :prefer_html?, :set_html_preference
 
   def prefer_html?
-    session[:html_preference] == 'true'
+    # session[:html_preference] == 'true'
+    true
   end
 
   def set_html_preference(preference)
