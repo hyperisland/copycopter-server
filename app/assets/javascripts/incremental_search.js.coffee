@@ -50,10 +50,11 @@ $.fn.incrementalSearch = (options) ->
     , 250)
 
   query = $(options.queryInput).val()
-  clearTimeout timeout if timeout
-  timeout = setTimeout(->
-    search query
-  , 250)
+  if query
+    clearTimeout timeout if timeout
+    timeout = setTimeout(->
+      search query
+    , 250)
 
   removeStart = ->
     $(options.queryInput).unbind "focus", removeStart
