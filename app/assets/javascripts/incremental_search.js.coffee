@@ -49,6 +49,12 @@ $.fn.incrementalSearch = (options) ->
       search query
     , 250)
 
+  query = $(options.queryInput).val()
+  clearTimeout timeout if timeout
+  timeout = setTimeout(->
+    search query
+  , 250)
+
   removeStart = ->
     $(options.queryInput).unbind "focus", removeStart
     $(options.blankSlate).slideUp()
