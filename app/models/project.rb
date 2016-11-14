@@ -41,6 +41,7 @@ class Project < ActiveRecord::Base
   def create_defaults(hash)
     DefaultCreator.new(self, hash).create
   end
+  handle_asynchronously :create_defaults
 
   def default_locale
     locales.first_enabled
