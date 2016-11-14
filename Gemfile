@@ -12,6 +12,7 @@ gem 'thin'
 gem 'yajl-ruby', '1.1.0', :require => 'yajl'
 gem "jquery-rails", "1.0.19"
 gem "delayed_job"
+gem 'delayed_job_active_record'
 
 group :assets do
   gem 'sass-rails', "~> 3.2.5"
