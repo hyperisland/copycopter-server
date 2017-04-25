@@ -16,7 +16,7 @@ class DefaultCreator
 
       defaults.each do |locale_key, locale_defaults|
         locale_defaults.each do |blurb_key, content|
-          create_default_for locale_key, blurb_key, content
+          create_default_for locale_key, blurb_key, content unless blurb_key.nil?
         end
       end
 
